@@ -85,7 +85,7 @@ main(int argc, char *argv[])
   assert((BSIZE % sizeof(struct dinode)) == 0);
   assert((BSIZE % sizeof(struct dirent)) == 0);
 
-  fsfd = open(argv[1], O_RDWR|O_CREAT|O_TRUNC, 0666);
+  fsfd = open(argv[1], O_RDWR|O_CREAT|O_TRUNC|O_BINARY, 0666);
   if(fsfd < 0)
     die(argv[1]);
 
@@ -137,7 +137,7 @@ main(int argc, char *argv[])
     
     assert(strchr(shortname, '/') == 0);
 
-    if((fd = open(argv[i], 0)) < 0)
+    if((fd = open(argv[i], O_BINARY|O_RDONLY, 0)) < 0)
       die(argv[i]);
 
     // Skip leading _ in name when writing to file system.
