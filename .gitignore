@@ -27,3 +27,9 @@ barrier
 *.pcap
 TAGS
 
+# for qiekn
+build/
+.cache/
+
+*.exe
+*.bk
