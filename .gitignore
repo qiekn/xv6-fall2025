@@ -33,3 +33,5 @@ build/
 
 *.exe
 *.bk
+
+docs/
