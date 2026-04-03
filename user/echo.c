@@ -7,6 +7,8 @@ main(int argc, char *argv[])
 {
   int i;
 
+  qiekn();
+
   for(i = 1; i < argc; i++){
     write(1, argv[i], strlen(argv[i]));
     if(i + 1 < argc){
@@ -16,4 +18,5 @@ main(int argc, char *argv[])
     }
   }
   exit(0);
+
 }

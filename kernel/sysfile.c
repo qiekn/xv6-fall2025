@@ -94,6 +94,11 @@ sys_write(void)
   return filewrite(f, p, n);
 }
 
+uint64 sys_qiekn(void) {
+  printf("qiekn is here\n");
+  return 1;
+}
+
 uint64
 sys_close(void)
 {
